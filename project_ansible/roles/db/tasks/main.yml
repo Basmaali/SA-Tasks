@@ -1,0 +1,23 @@
+---
+# tasks file for db
+- name: Install MYSQL \ apt-get install mysql
+  apt: 
+    name: mysql-server
+    state: latest
+
+- name: Install MYSQL Python  \  apt-get install python-mysqldb
+  apt: 
+    name: python-mysqldb
+    state: latest
+
+- name: Create MYSQL Database 
+  mysql_db: 
+    name: mydata
+    state: present
+
+- name: Create Database User
+  mysql_user: 
+    name: basma
+    password: basma
+    priv: '*.*:ALL'
+    state: present

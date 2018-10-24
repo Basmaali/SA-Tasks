@@ -1,0 +1,34 @@
+---
+# tasks file for net
+- name: Install Nginx \ apt-get install
+  apt: 
+    name: nginx
+    state: latest
+ 
+- name: Install PHP-FPM  \ apt-get install php5-fpm
+  apt: 
+    name: php5-fpm
+    state: latest
+
+- name: Configure PHP  \ apt-get install php5
+  lineinfile:
+    dest: /etc/php5/fpm/php.ini
+    regexp: ';cgi.fix_pathinfo=0'
+    insertafter: 'cgi.fix_pathinfo'
+    line: 'cgi.fix_pathinfo = 0'
+
+- name: Edit Configuration file of Nginx
+  template: 
+    src: default_host.j2
+    dest: /etc/nginx/sites-available/default
+
+- name: Create Root Directory
+  file: 
+    path: /usr/share/nginx/html/
+    state: directory
+
+- name: Upload phpinfo.php
+  template: 
+    src: index.php.j2
+    dest: /usr/share/nginx/html/phpinfo.php
+    mode: 0755

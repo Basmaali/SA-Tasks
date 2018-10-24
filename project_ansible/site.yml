@@ -1,0 +1,9 @@
+---
+
+- hosts: lemp
+  remote_user: basma
+
+  roles:
+    - common
+    - web
+    - db 

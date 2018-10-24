@@ -1,0 +1,11 @@
+---
+# tasks file for widespread
+- name: change Repo Web \ Add Repos where can update and Install from
+  copy: 
+    src: source.list
+    dest: /etc/apt
+    backup: yes
+
+- name: update \ apt-get update
+  apt: 
+     update_cache: yes
