@@ -13,6 +13,5 @@ do
 	else 
 		mv "$f" "$prefix $f"		
 		echo "Renaming $f to "$prefix $f""
-		
 	fi
 done
