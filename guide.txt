@@ -1,0 +1,46 @@
+Dear All
+
+Kindly hoped to find this well
+
+1)Ansible Task:
+find it in project_ansible direcory in Github
+notes about installation 
+to create these roles
+in the path of project_ansible/roles/
+create Roles for "common,net,db"
+ansible-galaxy init common   // this noted for apt
+ansible-galaxy init web   // this noted for web "nginx"
+ansible-galaxy init db     // this noted for web mysql
+
+In "/ansible_project/hosts" file this IP for my test
+
+In "roles/common/file" add "sources.list" from "/etc/apt/sources.list" file 
+In "roles/web/templates/" add these files " default_host.j2" which is the configuration file for "Nginx"
+And "index.php.j2" which is the PHP file
+In "roles/db/tasks/main.yml", I created database "mydatabase" and the user "basma" which is the user for test
+
+To run playbook
+from this dir "ansible_project/"
+ansible-playbook -i hosts site.yml
+------------------------------------------------------------------------------------------------------------------
+
+2)Firewall Task:
+1- the solve in "task1_firewall.sh"
+in my test i use port 22 and ip for my pc
+
+2- the script "task2_firewall.sh"
+
+------------------------------------------------------------------------------------------------------------------
+
+3)Shell scripting Task:
+ Task1:
+------
+The script "task1_shell.sh"
+
+Task2:
+------
+The script "task2_shell.sh"
+I used "test" file as my log file 
+--------------------------------------------------------------------------------------------------------------------
+
+Thank you,hope to pass this task and being with your team as soon as possible
