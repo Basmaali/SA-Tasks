@@ -31,7 +31,7 @@ while read v;
 do
 	te+=("$v")
 done < test1
-##To print the extracted pattern from log
+##To print the extracted pattern from log file
 for ((x==0 ;x<=${#y[*]};x=x+3 ))
 do
 	if [[ $x == ${#y[*]} ]]
