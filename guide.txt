@@ -6,13 +6,13 @@ Kindly hoped to find this well
 find it in project_ansible direcory in Github
 notes about installation 
 to create these roles
-in the path of project_ansible/roles/
-create Roles for "common,net,db"
+in the path of "project_ansible/roles/"
+create Roles for "common,web,db"
 ansible-galaxy init common   // this noted for apt
 ansible-galaxy init web   // this noted for web "nginx"
 ansible-galaxy init db     // this noted for web mysql
 
-In "/ansible_project/hosts" file this IP for my test
+In "/ansible_project/hosts" file this IP"10.0.10.128" for my test
 
 In "roles/common/file" add "sources.list" from "/etc/apt/sources.list" file 
 In "roles/web/templates/" add these files " default_host.j2" which is the configuration file for "Nginx"
@@ -25,14 +25,16 @@ ansible-playbook -i hosts site.yml
 ------------------------------------------------------------------------------------------------------------------
 
 2)Firewall Task:
-1- the solve in "task1_firewall.sh"
-in my test i use port 22 and ip for my pc
+==================
+1- The solve in "task1_firewall.sh"
+In my test,I used port 22 and ip for my pc
 
 2- the script "task2_firewall.sh"
 
 ------------------------------------------------------------------------------------------------------------------
 
 3)Shell scripting Task:
+========================
  Task1:
 ------
 The script "task1_shell.sh"
