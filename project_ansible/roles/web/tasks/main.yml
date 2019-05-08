@@ -7,7 +7,7 @@
  
 - name: Install PHP-FPM  \ apt-get install php7-fpm
   apt: 
-    name: php7-fpm
+    name: php7.0-fpm
     state: latest
 
 - name: Configure PHP  \ apt-get install php7
