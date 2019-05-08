@@ -13,10 +13,8 @@ server {
 	}
 
 	location ~ \.php$ {
-		fastcgi_split_path_info ^(.+\.php)(/.+)$;
+		include snippets/fastcgi-php.conf;
 		fastcgi_pass unix:/var/run/php7-fpm.sock;
-		fastcgi_index index.php;
-		include fastcgi_params;
 	}
 
 
